@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #subjectsNav {
+    list-style: none;
+}
+#subjectsNav li {
+    width: 70px;
+    display: block;
+    color: red;
+    float: left;
+    position: relative;
+}
+#subjectsNav li:active > ul {
+    display: block;
+}
+/* Sub-menu */
+ #subjectsNav ul {
+    transition: all;
+    animation-duration: 1000;
+    list-style: none;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    z-index: 99999;
+}
+#subjectsNav ul li {
+    float: none;
+    display: block;
+}
+#subjectsNav ul ul {
+    top: 0;
+    left: 70px;
+}
+</style>
+<body>
+    <ul id="subjectsNav">
+        <li><a href="#" title="SUBJECTS">SUBJECTS</a>
+        
+            <ul>
+                <li><a href="#" title="Maths">Maths</a>
+                </li>
+                <li><a href="#" title="English">English</a>
+                </li>
+                <li><a href="#" title="Spanish">Spanidsh</a>
+                </li>
+                <li><a href="#" title="History">History</a>
+                </li>
+                <li><a href="#" title="Science">Science</a>
+                </li>
+                <li><a href="#" title="EXTRA">EXTRA</a>
+                    <ul>
+                        <li><a href="#" title="Arts">Arts</a>
+                        </li>
+                        <li><a href="#" title="Sports">Sports</a>
+                        </li>
+                        <li><a href="#" title="Community">Community</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#" title="Marks">Marks</a>
+                </li>
+            </ul>
+        </li>
+        </ul>
+        
+</body>
+</html>

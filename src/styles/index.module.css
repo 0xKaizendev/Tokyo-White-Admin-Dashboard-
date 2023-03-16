@@ -1,0 +1,19 @@
+.grid {
+  width: 100%;
+  min-height: 100%;
+  background-color: #F6F8FB;
+  display: grid;
+  grid-template-columns: 18% 82%;
+  grid-template-rows: 1fr 16fr;
+}
+.navbar {
+  grid-column: 2 / span 2;
+}
+.sidebar {
+  grid-column: 1 / span 1;
+  grid-row: 1 span 2;
+}
+.content {
+  grid-column: 1 / span 1;
+  background-color: bisque;
+}
