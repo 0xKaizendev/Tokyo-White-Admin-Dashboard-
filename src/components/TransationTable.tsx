@@ -1,4 +1,4 @@
-import React, {MouseEventHandler, useState } from 'react'
+import React, { useState } from 'react'
 import { tableHead, tableData, BiTrendingDown, MdDelete } from '..'
 import { Table } from "flowbite-react";
 import { ImSearch } from "react-icons/im";
@@ -32,11 +32,27 @@ const TransationTable = () => {
       step:6
     },
   ]
-  const [table, setTableData] = useState(tableData)
+  const [data, setData] = useState(tableData.slice(0,5))
+  console.log(tableData.length)
+  console.log(data.length)
   const [step,setStep]= useState(1)
-  const handleid=(event:MouseEvent):void=>{
-      console.log(event.target)
-  }
+// Fonction pour récupérer les transactions suivantes en fonction d'un pas donné
+
+const handleSteps=(pas:number)=> {
+  // On defini le pas actuel sur son numero correspondant ce qui lui donne cet arriere pla bleu
+  setStep(pas)
+  // Indice de départ pour extraire les transactions
+  const startIndex = (pas - 1) * 5;
+  // Indice de fin pour extraire les transactions
+  const endIndex = startIndex + 5; 
+
+  // méthode slice pour extraire une tranche de 10 transactions
+  const tranche = tableData.slice(startIndex, endIndex);
+  setData(tranche)
+
+  return tranche;
+}
+
   return (
     <div className='w-full  p-6'>
       <div className='w-full flex items-center p-4'>
@@ -49,7 +65,7 @@ const TransationTable = () => {
         </div>
       </div>
       <div className='block w-full overflow-x-hidden shadow-md   rounded-xl'>
-        <Table className='text-base shadow-none border border-t-0 border-l-0 border-r-0 border-blue-gray-300' >
+        <Table className='text-base shadow-none ' >
           <Table.Head className=' shadow-none'>
             {
               tableHead.map(head => <Table.HeadCell className='uppercase px-6 bg-blueGray-50  align-middle  border-solid border-gray py-3 text-xs  border-l-0 border-r-0 whitespace-nowrap font-semibold text-left h-16' key={head.id + "jsj"}>{head.title}</Table.HeadCell>)
@@ -58,7 +74,7 @@ const TransationTable = () => {
           </Table.Head>
           <Table.Body className=' shadow-none'>
             {
-              table.map(cell => <Table.Row key={cell.id} className='font-bold  shadow-none'>
+              data.map((cell,id) => <Table.Row key={cell.id} className='font-bold  shadow-none'>
                 <Table.Cell className='shadow-none'>
                   <div className='flex gap-4'>
                     <span className='w-8 h-8 rounded-full bg-[#ECFBE6] flex items-center justify-center'>
@@ -137,11 +153,13 @@ const TransationTable = () => {
         </Table>
         <div className=' items-center w-full justify-center h-10 flex m-4  font-semibold text-black'>
         <div className='justify-center gap-10 flex w-2/4 items-center'>
-        <span className='cursor-pointer text-xl'>{"<"}</span>
+        <span className='cursor-pointer text-xl '>{"<"}</span>
         {
           setps.map(numer=><span key={numer.id} className={`w-10 h-10 ${step===numer.step? "bg-[#1A75FF]":""} rounded-md flex items-center justify-center 
           cursor-pointer`} id={numer.step.toString()}>
-                <p id={numer.step.toString()} className={`text-xl ${step===numer.step? "text-white": "etxt-black"}`} onClick={(e:any):void=>setStep(Number(e.target.id))}>{numer.step}</p>
+                <p id={numer.step.toString()} className={`text-xl ${step===numer.step? "text-white": "text-black"}`} 
+                onClick={(e:any)=>handleSteps(Number(e.target.id))}
+                >{numer.step}</p>
           </span>)
         }
             <span className='cursor-pointer text-xl'>{">"}</span>
