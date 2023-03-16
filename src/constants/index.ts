@@ -1,9 +1,9 @@
 import { IconType } from "react-icons";
 import { ImSearch } from "react-icons/im";
-import { BiLocationPlus,BiTargetLock } from "react-icons/bi";
-import { MdBarChart,MdCake } from "react-icons/md";
-import { AiFillSetting,AiFillCloud } from "react-icons/ai";
-import { IoMdNotifications,IoIosPhonePortrait } from "react-icons/io";
+import { BiLocationPlus, BiTargetLock } from "react-icons/bi";
+import { MdBarChart, MdCake } from "react-icons/md";
+import { AiFillSetting, AiFillCloud } from "react-icons/ai";
+import { IoMdNotifications, IoIosPhonePortrait } from "react-icons/io";
 export const navLinks: { id: string; title: string }[] = [
   {
     id: "Elements",
@@ -14,7 +14,7 @@ export const navLinks: { id: string; title: string }[] = [
     title: "Widgets",
   },
   {
-    id:  "Helps",
+    id: "Helps",
     title: "Helps",
   },
 ];
@@ -77,45 +77,41 @@ export const sideLinks: { id: number; title: string }[] = [
     title: "Healthcare",
   },
 ];
-export const sideItems: { id: string; title: string,icon: IconType;  }[] = [
+export const sideItems: { id: string; title: string; icon: IconType }[] = [
   {
     id: "Overview",
     title: "Overview",
     icon: IoIosPhonePortrait,
-   
   },
   {
     id: "Dashboard",
     title: "Dashboard",
-    icon:MdBarChart,
-
+    icon: MdBarChart,
   },
   {
     id: "Applications",
     title: "Applications",
-    icon:MdCake,
- 
+    icon: MdCake,
   },
   {
     id: "Addresses",
     title: "Addresses",
-    icon:BiTargetLock,
- 
+    icon: BiTargetLock,
   },
   {
     id: "Extra menu",
     title: "Extra",
-    icon:MdBarChart,
+    icon: MdBarChart,
   },
   {
     id: "Element",
     title: "Element",
-    icon:BiLocationPlus
+    icon: BiLocationPlus,
   },
   {
     id: "Widgets",
     title: "Widgets",
-    icon:AiFillCloud,
+    icon: AiFillCloud,
   },
 ];
 export const cryptoLogos: {
@@ -203,7 +199,6 @@ export const tableHead: { id: string; title: string }[] = [
   },
 ];
 
-
 export const tableData: {
   details: string;
   id: string;
@@ -219,7 +214,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed1",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -228,7 +223,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed2",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -237,7 +232,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed3",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -246,7 +241,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed4",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -255,7 +250,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed5",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -264,7 +259,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed6",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -273,7 +268,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed7",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -282,7 +277,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed8",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -291,7 +286,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed9",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -309,7 +304,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed10",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -318,7 +313,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed11",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -327,7 +322,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed12",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -336,7 +331,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed13",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -345,7 +340,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed14",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -354,7 +349,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed15",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -363,7 +358,7 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed16",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
   {
@@ -372,12 +367,12 @@ export const tableData: {
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed17",
+    status: "Completed",
     date: new Date("March 8, 2024"),
   },
 ];
 
- const generateUniqueIds=<T extends { id?: string }>(array: T[]): T[]=> {
+const generateUniqueIds = <T extends { id?: string }>(array: T[]): T[] => {
   const idSet = new Set<string>();
   return array.map((item) => {
     if (!item.id) {
@@ -390,6 +385,5 @@ export const tableData: {
     }
     return item;
   });
-}
-export const data = generateUniqueIds(tableData)
-
+};
+export const data = generateUniqueIds(tableData);
