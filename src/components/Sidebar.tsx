@@ -12,7 +12,7 @@ const Sidebar = () => {
       <Button size="md" className='w-full bg-bleu'>Purchase now</Button>
       <div className='mt-12  flex items-center justify-start flex-col gap-3 p-5 '>
         {
-          sideItems.map((item) => <div key={item.id} className='w-full flex flex-col'>
+          sideItems.map((item) => <div key={item.id} className='w-full flex flex-col '>
             <span className={`${activeLink === item.title.toLocaleLowerCase() ? "text-bleu" : ""} text-base flex items-center p-1  gap-2 cursor-pointer w-10/12 justify-between`}> <div className='text-base flex items-center p-1  gap-2'>
             <item.icon className='  h-6 w-6 grow-0 order-none flex-none' /><Link href={'#'} onClick={() => setExpanded(() => {
               setActiveLink(item.title.toLowerCase())

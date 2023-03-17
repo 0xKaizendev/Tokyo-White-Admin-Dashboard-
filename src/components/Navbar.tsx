@@ -10,14 +10,14 @@ const Navbar = () => {
   const [activeIcon, setActiveIcon] = useState('')
   return (
     <div className={`${styles.navbar} flex p-5 items-center  shadow-md justify-between`}>
-      <div className='flex items-center justify-start gap-5 flex-1  '>
+      <div className='flex items-center justify-start gap-5 flex-1   '>
         <Image src='/assets/Logo.png' alt='logo' width='100' height='100' />
         <ul className='flex gap-3 h-full items-center justify-center text-md'>
           {
             navLinks.map((link, index) => <li key={link.id}>
-              <span className='flex flex-row items-center justify-center gap-1 font-normal text-base'>
+              <span className='flex flex-row items-center justify-center gap-1  text-base'>
                 <div className='flex flex-col items-between justify-center'>
-                  <Link className={`  ${activeLink === link.title.toLocaleLowerCase() ? 'text-bleu' : "text-gray"}`} href="" onClick={() => setActiveLink(link.title.toLocaleLowerCase())}>{link.title}</Link>
+                  <Link className={`leading-8 ${activeLink === link.title.toLocaleLowerCase() ? 'text-bleu' : "text-gray"}`} href="" onClick={() => setActiveLink(link.title.toLocaleLowerCase())}>{link.title}</Link>
                   <span className={`w-12 h-1 rounded-md bg-bleu ${activeLink === link.title.toLocaleLowerCase() ? 'bg-bleu' : "bg-transparent"}`}></span>
                 </div>
                 {
@@ -54,17 +54,11 @@ const Navbar = () => {
               }
             </div>
           </IconContext.Provider>
-          {/* <div className='grid grid-cols-5 grid-rows-2 text-center gap-0'>
-            <Image src='/assets/Profile.png' alt='logo' width='45' height='45' className='row-span-2 col-span-1 rounded-md ' />
-            <p className=' col-span-4 font-body'>Rozales A.</p>
-            <p className='font-normal col-span-4 '>FullStack Developer</p>
-
-          </div> */}
           <div className='flex gap-2'>
             <Image src='/assets/Profile.png' alt='logo' width='45' height='45' className='row-span-2 col-span-1 rounded-md ' />
             <span className='text-center'>
-              <p className=' col-span-4 font-body'>Rozales A.</p>
-              <p className='font-normal text-sm col-span-4 '>FullStack Developer</p>
+              <p className=' col-span-4 font-bold text-black'>Rozales A.</p>
+              <p className=' text-sm col-span-4 '>FullStack Developer</p>
             </span>
 
           </div>

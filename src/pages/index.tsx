@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       {/* grid grid-cols-6 grid-rows-2  bg-gray-100 */}
       <main className={` w-full `}>
-        <div className={`${styles.grid} w-full md:hidden sm:hidden`}>
+        <div className={`${styles.grid} w-full md:hidden sm:hidden font-perso font-light`}>
 
        <Sidebar/>
        <Navbar/>

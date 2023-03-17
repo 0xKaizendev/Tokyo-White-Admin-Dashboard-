@@ -3,13 +3,15 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Content from "./components/Content";
 import Link from "next/link";
+import { Table } from "flowbite-react";
 import {
   navLinks,
   navIcons,
   sideLinks,
   cryptoLogos,
   tableHead,
-  tableData,sideItems
+  tableData,
+  sideItems,
 } from "./constants";
 import {
   MdOutlineArrowBackIos,
@@ -19,11 +21,14 @@ import {
   MdMailOutline,
   MdModeEdit,
   MdDelete,
+  MdEdit,
 } from "react-icons/md";
 import { BiLocationPlus } from "react-icons/bi";
-import { IoIosPhonePortrait } from "react-icons/io";
+import { ImSearch } from "react-icons/im";
+import { IoIosPhonePortrait, IoIosArrowForward } from "react-icons/io";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { BiTrendingDown } from "react-icons/bi";
+import { Input } from "@material-tailwind/react";
 import {
   Menu,
   MenuHandler,
@@ -41,9 +46,11 @@ export {
   MdOutlineArrowBackIos,
   navIcons,
   sideLinks,
+  Table,
   MdBarChart,
   BiLocationPlus,
   sideItems,
+  ImSearch,
   IoIosPhonePortrait,
   AiOutlineArrowUp,
   cryptoLogos,
@@ -60,4 +67,6 @@ export {
   MenuHandler,
   MenuList,
   MenuItem,
+  Input,
+  MdEdit,IoIosArrowForward
 };
