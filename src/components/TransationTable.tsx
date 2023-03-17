@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
-import { tableHead, tableData, BiTrendingDown, MdDelete, Table, ImSearch, Input, MdEdit,IoIosArrowForward } from '..'
+import { tableHead, tableData, BiTrendingDown, MdDelete, Table, ImSearch, Input, MdEdit, IoIosArrowForward } from '..'
+import { IconType, icons } from 'react-icons'
 
 const TransationTable = () => {
-  const setps: { id: string, step: number }[] = [
+  const setps: { id: string, step: number, icon?: IconType }[] = [
+    {
+      id: 'prev',
+      step: 0,
+      icon: IoIosArrowForward
+    },
     {
       id: 'setp1',
       step: 1
@@ -26,6 +32,12 @@ const TransationTable = () => {
     {
       id: 'setp6',
       step: 6
+    },
+
+    {
+      id: 'next',
+      step: 0,
+      icon: IoIosArrowForward
     },
   ]
   const [data, setData] = useState(tableData.slice(0, 5))
@@ -144,16 +156,25 @@ const TransationTable = () => {
         </Table>
         <div className=' items-center w-full justify-center h-10 flex m-4  font-semibold text-black'>
           <div className='justify-center gap-10 flex w-2/4 items-center'>
-            <span className='cursor-pointer text-xl ' onClick={(e: any) => {step>1? handleSteps(step - 1): null}}>{"<"}</span>
             {
-              setps.map(numer => <span key={numer.id} className={`w-10 h-10 shadow-2xl drop-shadow-lg ${step === numer.step ? "bg-[#1A75FF]" : ""} rounded-md flex items-center justify-center 
+              setps.map((numer, index) => <span key={numer.id} className={`w-10 h-10 shadow-2xl drop-shadow-lg ${step === numer.step ? "bg-[#1A75FF]" : ""} rounded-md flex items-center justify-center 
           cursor-pointer`} id={numer.step.toString()}>
-                <p id={numer.step.toString()} className={`text-xl font-mono ${step === numer.step ? "text-white" : "text-black"}`}
-                  onClick={(e: any) => handleSteps(Number(e.target.id))}
-                >{numer.step}</p>
+                {
+                  numer.icon ? <numer.icon onClick={(e: any) => {
+                      if(numer.id ==='prev'&&step>1){
+                        handleSteps(step - 1)
+                      }
+                      else if(step>=1 && step <6 && numer.id==='next'){
+                        handleSteps(step + 1)
+                      }
+
+                  }} className={` cursor-pointer h-6 w-6 ${index === 0 ? "rotate-180" : ""}`} /> : <p id={numer.step.toString()} className={`text-xl font-mono ${step === numer.step ? "text-white" : "text-black"}`}
+                    onClick={(e: any) => handleSteps(Number(e.target.id))}
+                  >{numer.step}</p>
+                }
               </span>)
             }
-            <span className='cursor-pointer text-xl' onClick={(e: any) => {step>=1 && step <6? handleSteps(step + 1): null}}>{">"}</span>
+      
           </div>
         </div>
       </div>
