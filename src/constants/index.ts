@@ -209,12 +209,12 @@ export const tableData: {
   date: Date;
 }[] = [
   {
-    details: "Fiat Deposit",
+    details: "Crypto Deposit",
     id: "6gfr85fsf4hr",
     source: "Bank Account",
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
-    status: "Completed",
+    status: "rejected",
     date: new Date("March 8, 2024"),
   },
   {
