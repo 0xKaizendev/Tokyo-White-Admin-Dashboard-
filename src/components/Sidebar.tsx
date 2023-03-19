@@ -8,7 +8,7 @@ const Sidebar = () => {
   const [activeSubLink, setActiveSubLink] = useState('finance')
   const [expanded, setExpanded] = useState('dashboard')
   return (
-    <div className=' row-span-2 col-span-1 p-5  shadow-md text-black text-sm'>
+    <div className=' row-span-3 col-span-1 p-5  text-black text-sm shadow-md '>
       <Button size="md" className='w-full bg-bleu'>Purchase now</Button>
       <div className='mt-12  flex items-center justify-start flex-col gap-3 p-5 '>
         {

@@ -3,89 +3,91 @@ import { tableHead, tableData, BiTrendingDown, MdDelete, Table, ImSearch, Input,
 import { IconType, icons } from 'react-icons'
 
 const TransationTable = () => {
-  const TableBody: React.FC<{ Transactions:  {
-    details: string,
-    id: string,
-    source: string,
-    amount: string,
-    balance: string,
-    status: string,
-    date: Date,
-  }[] }> = ({ Transactions }) => {
+  const TableBody: React.FC<{
+    Transactions: {
+      details: string,
+      id: string,
+      source: string,
+      amount: string,
+      balance: string,
+      status: string,
+      date: Date,
+    }[]
+  }> = ({ Transactions }) => {
     return (
-      <Table.Body>
-      {Transactions.map((cell, id) =>
-        <Table.Row key={cell.id} className='  shadow-none text-sm'>
-          <Table.Cell className='shadow-none'>
-            <div className='flex gap-4'>
-              <span className='w-8 h-8 rounded-full bg-[#ECFBE6] flex items-center justify-center'>
-                <BiTrendingDown className='w-6 h-6 text-vert' />
-              </span>
-              <span className='flex flex-col gap-1'>
-                <p className='font-bold text-base'>
-                  {cell.details}
-                </p>
-                <p className='text-blue-gray-300 text-xs'>
-                  {cell.date.toLocaleString()}
-                </p>
-              </span>
-            </div>
-          </Table.Cell>
-          <Table.Cell className='shadow-none'>
-            <div>
-              <p className='uppercase font-bold text-base'>
-                {cell.id}
-              </p>
-              <div className='flex gap-2 items-center justify-start'>
-                <div className='h-2 w-2 rounded-full bg-vert'></div>
-                <p className='text-vert'>Deposit</p>
+      <Table.Body className='text-black'>
+        {Transactions.map((cell, id) =>
+          <Table.Row key={cell.id} className='  shadow-none text-sm'>
+            <Table.Cell className='shadow-none'>
+              <div className='flex gap-4'>
+                <span className='w-8 h-8 rounded-full bg-[#ECFBE6] flex items-center justify-center'>
+                  <BiTrendingDown className='w-6 h-6 text-vert' />
+                </span>
+                <span className='flex flex-col gap-1'>
+                  <p className='font-bold text-base'>
+                    {cell.details}
+                  </p>
+                  <p className='text-blue-gray-300 text-xs'>
+                    {cell.date.toLocaleString()}
+                  </p>
+                </span>
               </div>
-            </div>
-          </Table.Cell>
-          <Table.Cell className=' font-body shadow-none'>
-            <div>
-              <p className=' font-bold text-base'>
-                {cell.source}
-              </p>
-              <div className='mt-1'>
-
-                <p className='text-blue-gray-300'>****1111</p>
+            </Table.Cell>
+            <Table.Cell className='shadow-none'>
+              <div>
+                <p className='uppercase font-bold text-base'>
+                  {cell.id}
+                </p>
+                <div className='flex gap-2 items-center justify-start'>
+                  <div className='h-2 w-2 rounded-full bg-vert'></div>
+                  <p className='text-vert'>Deposit</p>
+                </div>
               </div>
-            </div>
-          </Table.Cell>
-          <Table.Cell className='uppercase  shadow-none  '>
-            <div className=''>
-              <span className=' font-bold text-base text-left'>
-                {cell.amount}
-              </span> <br />
+            </Table.Cell>
+            <Table.Cell className=' font-body shadow-none'>
+              <div>
+                <p className=' font-bold text-base'>
+                  {cell.source}
+                </p>
+                <div className='mt-1'>
 
-              <span className='text-blue-gray-300 text-left'>18,477854.21 USD</span>
-            </div>
-          </Table.Cell>
-          <Table.Cell className='uppercase shadow-none '>
-            <div className=''>
-              <p className=' font-bold text-left '>
-                {cell.balance}
-              </p>
-              <p className='text-blue-gray-300 mt-1 text-left '>18,477854.21 USD</p>
-            </div>
-          </Table.Cell>
-          <Table.Cell className='shadow-none'>
-            <div className={`${cell.status === 'Completed' ? "bg-[#ECFBE6]" : "bg-red-200"} py-1 rounded-md text-center`}>
-              <p className={` font-bold ${cell.status === 'Completed' ? "text-vert" : "text-red-500"}`}> {cell.status}</p>
-            </div>
-          </Table.Cell>
-          <Table.Cell className='' >
-            <div className='flex justify-between gap-8'>
-              <MdEdit className='w-4 h-6 text-bleu cursor-pointer' />
-              <MdDelete className='w-4 h-6 text-red-500 cursor-pointer' />
-            </div>
-          </Table.Cell>
-        </Table.Row>)}
-    </Table.Body>
+                  <p className='text-blue-gray-300'>****1111</p>
+                </div>
+              </div>
+            </Table.Cell>
+            <Table.Cell className='uppercase  shadow-none  '>
+              <div className=''>
+                <span className=' font-bold text-base text-left'>
+                  {cell.amount}
+                </span> <br />
+
+                <span className='text-blue-gray-300 text-left'>18,477854.21 USD</span>
+              </div>
+            </Table.Cell>
+            <Table.Cell className='uppercase shadow-none '>
+              <div className=''>
+                <p className=' font-bold text-left '>
+                  {cell.balance}
+                </p>
+                <p className='text-blue-gray-300 mt-1 text-left '>18,477854.21 USD</p>
+              </div>
+            </Table.Cell>
+            <Table.Cell className='shadow-none'>
+              <div className={`${cell.status === 'Completed' ? "bg-[#ECFBE6]" : "bg-red-200"} py-1 rounded-md text-center`}>
+                <p className={` font-bold ${cell.status === 'Completed' ? "text-vert" : "text-red-500"}`}> {cell.status}</p>
+              </div>
+            </Table.Cell>
+            <Table.Cell className='' >
+              <div className='flex justify-between gap-8'>
+                <MdEdit className='w-4 h-6 text-bleu cursor-pointer' />
+                <MdDelete className='w-4 h-6 text-red-500 cursor-pointer' />
+              </div>
+            </Table.Cell>
+          </Table.Row>)}
+      </Table.Body>
     );
   };
-  
+
 
   const setps: { id: string, step: number, icon?: IconType }[] = [
     {
@@ -138,16 +140,22 @@ const TransationTable = () => {
   const [searchTimeout, setSearchTimeout] = useState(0);
   const [step, setStep] = useState(1)
   const handlesearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // On supprime le dernier timeur s'il existe
     clearTimeout(searchTimeout)
+    // On defini ensuite la valeur a rechercher provenant de l'input
     setSearch(e.target.value)
+    // Et on cree un nouveau timer 
     setSearchTimeout(
+      // Petit subtilité de Typescript il faut convertir le timer en nombre
       Number(setTimeout(() => {
+        // Ici le resultat de la recherche  est egal au filter du tableau general qui prend une fonction en parametre 
         const result = tableData.filter(
           (item) =>
-
+            // On ajoute les objets dont l'id ou le statut contiennent la valeur a rechercher
             item.status.toLowerCase().includes(search.toLowerCase()) ||
             item.id.toLowerCase().includes(search.toLowerCase())
         )
+        // Et on insere le resultat dans un state
         setSearchResult(result)
       }, 500))
     )
@@ -168,7 +176,7 @@ const TransationTable = () => {
   return (
     <div className='w-full  p-6'>
       <div className='w-full flex items-center p-4'>
-        <p className='mb-2 font-bold flex-1 text-base'>Recent Orders</p>
+        <p className='mb-2 font-bold flex-1 text-base text-black'>Recent Orders</p>
         <div className='mb-2 flex-1 flex justify-end'>
           <div className="w-22 ">
             <Input onChange={handlesearch} label="Search by status or id" icon={<ImSearch
@@ -180,12 +188,12 @@ const TransationTable = () => {
         <Table className='text-base shadow-none ' >
           <Table.Head className=' shadow-none'>
             {
-              tableHead.map(head => <Table.HeadCell className='uppercase px-6 bg-blueGray-50    border-solid border-gray py-3  border-l-0 border-r-0 whitespace-nowrap font-semibold text-left h-16 text-xs' key={head.id + "jsj"}>{head.title}</Table.HeadCell>)
+              tableHead.map(head => <Table.HeadCell className='uppercase px-6 bg-blueGray-50    border-solid border-gray py-3  border-l-0 border-r-0 whitespace-nowrap font-semibold text-left h-16 text-xs text-black' key={head.id + "jsj"}>{head.title}</Table.HeadCell>)
             }
           </Table.Head>
           {
-            search?  <TableBody Transactions={searchResult} />: 
-            <TableBody Transactions={data} />
+            search ? <TableBody Transactions={searchResult} /> :
+              <TableBody Transactions={data} />
           }
 
         </Table>

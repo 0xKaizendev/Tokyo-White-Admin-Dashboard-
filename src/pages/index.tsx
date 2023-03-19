@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { Navbar,Sidebar,Content } from '..'
+import { Navbar,Sidebar,Content, } from '..'
 import styles from '../styles/index.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       {/* grid grid-cols-6 grid-rows-2  bg-gray-100 */}
       <main className={` w-full `}>
-        <div className={`${styles.grid} w-full md:hidden sm:hidden font-perso font-light`}>
+        <div className={`${styles.grid} w-full md:hidden sm:hidden  font-perso font-light  `}>
 
        <Sidebar/>
        <Navbar/>

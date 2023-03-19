@@ -4,6 +4,7 @@ import { BiLocationPlus, BiTargetLock } from "react-icons/bi";
 import { MdBarChart, MdCake } from "react-icons/md";
 import { AiFillSetting, AiFillCloud } from "react-icons/ai";
 import { IoMdNotifications, IoIosPhonePortrait } from "react-icons/io";
+import Chart, { ChartData, ChartOptions } from "chart.js/auto";
 export const navLinks: { id: string; title: string }[] = [
   {
     id: "Elements",
@@ -387,3 +388,29 @@ const generateUniqueIds = <T extends { id?: string }>(array: T[]): T[] => {
   });
 };
 export const data = generateUniqueIds(tableData);
+
+export const chartColors: {
+  id: string;
+  color1: string;
+  color2: string;
+  color3: string;
+}[] = [
+  {
+    id: "greenChart",
+    color1: "rgba(68, 214, 0, 0.51)",
+    color2: "rgba(68, 214, 0, 0.16)",
+    color3: "rgba(68, 214, 0, 0)",
+  },
+  {
+    id: "blueChart",
+    color1: "rgba(26, 117, 255, 1)",
+    color2: "rgba(26, 117, 255, 0.16)",
+    color3: "rgba(26, 117, 255, 0)",
+  },
+  {
+    id: "orangeChart",
+    color1: "rgba(255, 163, 26, 1)",
+    color2: "rgba(255, 163, 26, 0.16)",
+    color3: "rgba(255, 163, 26, 0)",
+  },
+];

@@ -41,6 +41,6 @@ const options ={
   },
   
 }
-export function CryptoChart() {
+export function PieChart() {
   return <Doughnut data={data} options={{...options}}  />;
 }

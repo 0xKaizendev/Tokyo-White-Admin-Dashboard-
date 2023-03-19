@@ -2,6 +2,7 @@ import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Content from "./components/Content";
+import WatchList from "./components/WatchList";
 import Link from "next/link";
 import { Table } from "flowbite-react";
 import {
@@ -11,7 +12,7 @@ import {
   cryptoLogos,
   tableHead,
   tableData,
-  sideItems,
+  sideItems,chartColors
 } from "./constants";
 import {
   MdOutlineArrowBackIos,
@@ -25,6 +26,8 @@ import {
 } from "react-icons/md";
 import { BiLocationPlus } from "react-icons/bi";
 import { ImSearch } from "react-icons/im";
+import { CgMenuGridR } from "react-icons/cg";
+import { TiThMenu } from "react-icons/ti";
 import { IoIosPhonePortrait, IoIosArrowForward } from "react-icons/io";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { BiTrendingDown } from "react-icons/bi";
@@ -68,5 +71,8 @@ export {
   MenuList,
   MenuItem,
   Input,
-  MdEdit,IoIosArrowForward
+  MdEdit,
+  IoIosArrowForward,
+  WatchList,
+  CgMenuGridR,TiThMenu,chartColors
 };

@@ -1,11 +1,13 @@
 import React from 'react'
-import { AiOutlineArrowUp, cryptoLogos, Button, Image, MdOutlineLock, MdPhoneLocked ,MdMailOutline} from '..'
-import { CryptoChart } from './Chart'
+import { AiOutlineArrowUp, cryptoLogos, Button, Image, MdOutlineLock, MdPhoneLocked ,MdMailOutline,WatchList} from '..'
+import { PieChart } from './PieChart'
+
 import { Switch } from "@material-tailwind/react";
 import TransationTable from './TransationTable';
+import styles from '../styles/index.module.css'
 const Content = () => {
   return (
-    <div className='p-5'>
+    <div className={`p-5 ${styles.content}`}>
       <div className='leading-[40px]'>
         <h1 className='text-3xl font-bold leading-10'>Hello, Rozales!</h1>
         <p className='text-gray text-base'>Today is a good day to start trading crypto assets!</p>
@@ -34,7 +36,7 @@ const Content = () => {
         <div className='flex w-2/4'>
           <div className=' border-l-2 border-t-0 border-r-0 border-b-0 border w-2/4 flex items-center justify-center  border-[#e2e8f0] '>
             <div className="w-44 h-44 ">
-              <CryptoChart />
+              <PieChart />
             </div>
 
           </div>
@@ -134,6 +136,7 @@ const Content = () => {
         </div>
       </div>
       <TransationTable/>
+      <WatchList/>
     </div>
   )
 }

@@ -20,6 +20,6 @@
     },
     "types": ["react",]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/AreaChart.jsx"],
   "exclude": ["node_modules"]
 }
