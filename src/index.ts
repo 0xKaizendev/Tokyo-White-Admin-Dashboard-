@@ -12,7 +12,8 @@ import {
   cryptoLogos,
   tableHead,
   tableData,
-  sideItems,chartColors
+  sideItems,
+  chartColors,cryptoPrice
 } from "./constants";
 import {
   MdOutlineArrowBackIos,
@@ -74,5 +75,7 @@ export {
   MdEdit,
   IoIosArrowForward,
   WatchList,
-  CgMenuGridR,TiThMenu,chartColors
+  CgMenuGridR,
+  TiThMenu,
+  chartColors,cryptoPrice
 };

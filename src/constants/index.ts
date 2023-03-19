@@ -216,7 +216,7 @@ export const tableData: {
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
     status: "rejected",
-    date: new Date("March 8, 2024"),
+    date: new Date("Apr 12, 2023"),
   },
   {
     details: "Fiat Deposit",
@@ -225,7 +225,7 @@ export const tableData: {
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
     status: "Completed",
-    date: new Date("March 8, 2024"),
+    date: new Date("Jan 8, 2024"),
   },
   {
     details: "Fiat Deposit",
@@ -234,7 +234,7 @@ export const tableData: {
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
     status: "Completed",
-    date: new Date("March 8, 2024"),
+    date: new Date("March 30, 2024"),
   },
   {
     details: "Fiat Deposit",
@@ -243,7 +243,7 @@ export const tableData: {
     amount: "+ 0.35547663174 BTC",
     balance: "+ 0.65547663174 BTC",
     status: "Completed",
-    date: new Date("March 8, 2024"),
+    date: new Date("Feb 15, 2024"),
   },
   {
     details: "Fiat Deposit",
@@ -413,4 +413,74 @@ export const chartColors: {
     color2: "rgba(255, 163, 26, 0.16)",
     color3: "rgba(255, 163, 26, 0)",
   },
+];
+
+
+export const cryptoPrice: {
+  id: string;
+  logo: string;
+  alt: string;
+  name: string;
+  symbol: string;
+  percentage: number;
+  change: number;
+  amount: number;
+  quantity?: number;
+  price:string,
+  chartColor:{}
+}[] = [
+  {
+    id: "BTCp",
+    logo: "/assets/btc.svg",
+    alt: "Bitcoin logo",
+    name: "Bitcoin",
+    symbol: "BTC",
+    percentage: 37,
+    change: 2.54,
+    amount: 500,
+    quantity: 1.2356,
+    price:"27,296.30",
+    chartColor:{
+      id: "greenChart",
+      color1: "rgba(68, 214, 0, 0.51)",
+      color2: "rgba(68, 214, 0, 0.16)",
+      color3: "rgba(68, 214, 0, 0)",
+    },
+  },
+  {
+    id: "ETHp",
+    logo: "/assets/eth.svg",
+    alt: "Ethereum logo",
+    name: "Ethereum",
+    symbol: "ETH",
+    percentage: -10,
+    change: -5.2,
+    price:"1,786,99",
+    amount:-90,
+    chartColor:  {
+      id: "blueChart",
+      color1: "rgba(26, 117, 255, 1)",
+      color2: "rgba(26, 117, 255, 0.16)",
+      color3: "rgba(26, 117, 255, 0)",
+    },
+  },
+  {
+    id: "ADAp",
+    logo: "/assets/ada.svg",
+    alt: "Cardano logo",
+    name: "Cardano",
+    symbol: "ADA",
+    percentage: -21,
+    change: 10.2,
+    amount: -5,
+    quantity: -10.42,
+    price:"0,23",
+    chartColor:  {
+      id: "orangeChart",
+      color1: "rgba(255, 163, 26, 1)",
+      color2: "rgba(255, 163, 26, 0.16)",
+      color3: "rgba(255, 163, 26, 0)",
+    },
+  },
+  
 ];
