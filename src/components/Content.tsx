@@ -9,14 +9,14 @@ const Content = () => {
   return (
     <div className={`p-5 ${styles.content}`}>
       <div className='leading-[40px]'>
-        <h1 className='text-3xl font-bold leading-10'>Hello, Rozales!</h1>
+        <h1 className='text-3xl font-bold leading-10 text-black'>Hello, Rozales!</h1>
         <p className='text-gray text-base'>Today is a good day to start trading crypto assets!</p>
       </div>
       <div className='w-full   shadow-md  flex flex-row p-8 gap-4 rounded-md'>
         <div className='flex flex-col p-2 gap-10  w-2/4 items-start '>
-          <p className='font-bold text-lg'>Account Balance</p>
+          <p className='font-bold text-lg text-black'>Account Balance</p>
           <span className='flex flex-col gap-2'>
-            <p className='text-4xl font-bold'>$23,647.14</p>
+            <p className='text-4xl font-bold text-black'>$23,647.14</p>
             <p className='text-gray font-bold text-base'>1.01000005496 BTC</p>
           </span>
           <div className='flex items-center justify-center gap-4'>
@@ -24,7 +24,7 @@ const Content = () => {
               <AiOutlineArrowUp color='white' size={30} />
             </span>
             <span className='text-base h-full '>
-              <p className='font-bold mb-1 text-xl'>+ $23,647.14</p>
+              <p className='font-bold mb-1 text-xl text-black'>+ $23,647.14</p>
               <p className='text-base  text-gray'>This month</p>
             </span>
           </div>
@@ -101,13 +101,13 @@ const Content = () => {
 
         <div className=' flex-1 p-4 '>
           <div className='shadow-md w-full rounded-md flex h-full flex-col p-4  gap-1'>
-            <p className='text-base font-bold h-14 border border-l-0 border-t-0 border-r-0 border-b-1 border-[#e2e8f0]'>Account Security</p>
+            <p className='text-base font-bold h-14 border border-l-0 border-t-0 border-r-0 border-b-1 border-[#e2e8f0] text-black'>Account Security</p>
             <div className='h-16 flex items-center py-12 gap-3 justify-between border border-l-0 border-t-0 border-r-0 border-b-1 border-[#e2e8f0]'>
               <span className='w-12 h-12 bg-red-200 rounded-full flex items-center  justify-center'>
                 <MdOutlineLock className=' text-red-500 h-8 w-8' />
               </span>
               <div className='flex-1'>
-                <p className='font-bold text-base'>2FA Authehtification</p>
+                <p className='font-bold text-base text-black'>2FA Authehtification</p>
                 <p className=' text-red-500 mt-1 text-sm'>Disabled</p>
               </div>
               <Switch defaultChecked color="blue" id="2fa" />
@@ -117,7 +117,7 @@ const Content = () => {
                 <MdPhoneLocked className=' text-vert opa h-8 w-8' />
               </span>
               <div className='flex-1'>
-                <p className='font-bold text-base'>Phone verification</p>
+                <p className='font-bold text-base text-black'>Phone verification</p>
                 <p className=' text-vert text-sm mt-1'>Active</p>
               </div>
               <Switch defaultChecked color="blue" id="phone" />
@@ -127,7 +127,7 @@ const Content = () => {
                 <MdMailOutline className=' text-amber-700 h-8 w-8' />
               </span>
               <div className='flex-1'>
-                <p className='font-bold text-base '>2FA Authehtification</p>
+                <p className='font-bold text-base text-black'>2FA Authehtification</p>
                 <p className=' text-amber-700 mt-1 text-sm '>Not Completed</p>
               </div>
               <Switch defaultChecked color="blue" id="email" />
@@ -136,7 +136,8 @@ const Content = () => {
         </div>
       </div>
       <TransationTable/>
-      <WatchList/>
+      <WatchList fill/>
+      <WatchList fill={false}/>
     </div>
   )
 }

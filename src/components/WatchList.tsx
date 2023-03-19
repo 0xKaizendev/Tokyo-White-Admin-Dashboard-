@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import AreaChart from './AreaChart'
-import { CgMenuGridR, TiThMenu, chartColors, cryptoPrice, Image } from '..'
-const WatchList = () => {
+import { CgMenuGridR, TiThMenu, chartColors, cryptoPrice, Image, Button } from '..'
+const WatchList: React.FC<{ fill: boolean }> = ({ fill }) => {
   const [selected, setSelected] = useState('grid')
   return (
-    <div className={` p-6 w-full `}>
+    <div className={` p-6 w-full ${!fill === true ? ' shadow-md' : ""} flex flex-col items-center justify-center`}>
       <div className='w-full flex items-center justify-between'>
         <p className='font-bold text-base text-black'>Watch List</p>
         <div className='rounded-md  flex text-center border-2 border-blue-500'>
@@ -16,16 +16,21 @@ const WatchList = () => {
           </span>
         </div>
       </div>
-      <div className='flex gap-4 items-center  '>
+      <div className='flex gap-4 items-center  w-full '>
         {
           cryptoPrice.map(chart =>
-            <div key={chart.id} className='flex-1  flex-col rounded-sm shadow-md  items-end  '>
-              <div className='h-32  gap-3 flex items-start p-4  w-full '>
-                <Image src={chart.logo} width={42} height={42} alt={chart.alt} />
-                <span className=''>
-                  <p className='text-base font-bold text-black'>{chart.name}</p>
-                  <p className='text-sm text-gray'>{chart.symbol}</p>
-                </span>
+            <div key={chart.id} className={`flex-1  flex-col rounded-sm ${fill === true ? ' shadow-md' : ""}   items-center justify-center`}>
+              <div className={`gap-3 flex items-start p-4  w-full  ${!fill === true ? "justify-between" : ""}`}>
+
+                <div className='flex  gap-3'>
+                  <Image src={chart.logo} width={chart.id === 'ETHp' ? 28 : 42} height={chart.id === 'ETHp' ? 28 : 42} alt={chart.alt} />
+                  <span className=''>
+
+                    <p className='text-base font-bold text-black'>{chart.name}</p>
+                    <p className='text-sm text-gray'>{chart.symbol}</p>
+                  </span>
+                </div>
+                <span className={`${fill === true ? "hidden" : 'flex'} items-center justify-center text-gray text-sm h-7 w-10 rounded-md  bg-blue-gray-50 text-right font-bold`}><div className='p-1 '>24h</div></span>
               </div>
               <div className='gap-1 flex items-center p-4  w-full  flex-col'>
                 <div className='w-full flex  items-center  gap-4'>
@@ -39,11 +44,13 @@ const WatchList = () => {
                 </div>
 
               </div>
-              <AreaChart gradient={chart.chartColor} />
+              <div className={`w-full  ${fill === true ? "h-48" : 'h-24'} `}>
+                <AreaChart gradient={chart.chartColor} fill={fill} />
+              </div>
             </div>)
         }
-
       </div>
+      {!fill && <Button size="md" className='bg-transparent border mt-3 text-bleu border-blue'>View more assets</Button>}
     </div>
   )
 }

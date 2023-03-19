@@ -34,12 +34,13 @@ Chart.register(
 // }> = ({ gradient }) => {
 
 
-const AreaChart= ({gradient}) => {
+const AreaChart= ({gradient,fill}) => {
 
   const [context, setContext] = useState({})
   const chartRef = useRef(null);
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         display: false
@@ -60,8 +61,8 @@ const AreaChart= ({gradient}) => {
         ticks: {
           display: false
         }
-      },
-      y: {
+      }, 
+      y: { 
         grid: {
           display: false
         },
@@ -93,11 +94,12 @@ const AreaChart= ({gradient}) => {
     labels,
     datasets: [
       {
-        fill: true,
+        fill: fill,
         data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+        borderColor: gradient.color1,
         backgroundColor: context,
         tension: 0.4,
-        showLine: false,
+        showLine: fill? false: true,
         pointStyle: false
       },
     ],

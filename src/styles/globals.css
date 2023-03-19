@@ -21,3 +21,9 @@ body {
     display: none;
   }
 }
+#chart-wrapper {
+  display: inline-block;
+  position: relative;
+  background-color: aqua;
+  width: 100%;
+}
